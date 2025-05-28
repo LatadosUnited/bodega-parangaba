@@ -1,7 +1,27 @@
 body {
     background-color: #DEDEDE;
+    margin: 0; /* Remove margens padrão para usar todo o espaço da tela */
+    padding: 16px; /* Adiciona um padding para evitar que o conteúdo encoste nas bordas */
+    font-size: 16px; /* Tamanho de fonte base legível para mobile */
+    line-height: 1.5; /* Melhora a legibilidade do texto */
+    box-sizing: border-box; /* Garante que padding e bordas não aumentem o tamanho total */
+    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura total da tela */
 }
 
+/* Estiliza ícones para alinhamento e tamanho consistente */
 i {
     vertical-align: bottom;
+    font-size: 1.2rem; /* Tamanho relativo para ícones, ajustável em telas menores */
+}
+
+/* Media query para telas menores (ex.: celulares com largura até 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 12px; /* Reduz o padding em telas menores */
+        font-size: 14px; /* Ajusta o tamanho da fonte para telas pequenas */
+    }
+
+    i {
+        font-size: 1rem; /* Reduz o tamanho dos ícones em telas menores */
+    }
 }
